@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Birthday</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Sawarabi Mincho', serif;
+      background-image: url('https://www.transparenttextures.com/patterns/washi.png');
+      background-color: #fefefe;
+      background-repeat: repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: auto;
+      position: relative;
+    }
+
+    .message-container {
+      text-align: center;
+      color: #4b2e2e;
+      background-color: rgba(255, 255, 255, 0.8);
+      border: 2px solid #e6c9a8;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .farewell {
+      font-size: 4rem;
+      margin: 0 auto;
+      letter-spacing: 0.5rem;
+    }
+
+    .message {
+      margin-top: 30px;
+      font-size: 1.5rem;
+    }
+
+    .sakura {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Cherry_blossom_petal.svg/1024px-Cherry_blossom_petal.svg.png');
+      background-size: cover;
+      animation: fall linear infinite;
+      opacity: 0.8;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-10%) rotate(0deg);
+      }
+      100% {
+        transform: translateY(110vh) rotate(360deg);
+      }
+    }
+    @media (max-width: 768px) {
+  .message-container {
+    padding: 20px;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  .farewell {
+    font-size: 2.5rem;
+    letter-spacing: 0.3rem;
+  }
+
+  .message {
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+
+  audio {
+    width: 100%;
+  }
+    }
+  </style>
+</head>
+<body>
+ 
+ 
+  <div class="message-container">
+    
+<audio autoplay loop controls style="margin-bottom: 20px;">
+    <source src="Happy-Birthday.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+    
+  <div class="note">
+    Dear Yomy,<br><br>
+   Happy Birthday, dudesky! I am so happy that we are able to continue our fucking friendship after everything.
+You have come into my life in various roles, and I am grateful for every shared memory and also every little thing both of us probably forgot.
+Wishing you lots of new things to smile about from the bottom of my heart. May you continue to become exactly who you want to be, surrounded by those who love every last bit of you. 
+ It's still mindboggling to me how we are still online; maybe it's because neither of us seems to have placed any hopes in the future, but ironically, that's also what makes us talk in the present. My heart swells with warmth as I get to watch you grow as a person, and "beautiful" is an understatement for this experience. Imma keep this message short cause I always end up being sappy and ruining otherwise cheerful mood. <br><br>
+    With warmest wishes,
+  </div>
+
+
+  <div class="message"> Enjoy The Rest of this SPECIAL Day, Take Care of Yourself, and Keep Moving Forward !</div>
+</div>
+
+  <!-- Sakura petals -->
+  <script>
+    function createPetal() {
+      const petal = document.createElement('div');
+      petal.classList.add('sakura');
+      petal.style.left = Math.random() * window.innerWidth + 'px';
+      petal.style.animationDuration = (5 + Math.random() * 5) + 's';
+      document.body.appendChild(petal);
+
+      setTimeout(() => petal.remove(), 10000);
+    }
+
+    setInterval(createPetal, 300);
+  </script>
+
+</body>
+</html>
